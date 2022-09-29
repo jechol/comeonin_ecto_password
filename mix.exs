@@ -18,7 +18,7 @@ defmodule ComeoninEctoPassword.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger]]
+    [extra_applications: [:logger]]
   end
 
   def description do
@@ -52,11 +52,11 @@ defmodule ComeoninEctoPassword.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      {:ecto, "~> 3.0 or ~> 2.0"},
+      {:ecto, ">= 0.0.0"},
       {:ex_doc, ">= 0.0.0", only: :dev, runtime: false},
-      {:pbkdf2_elixir, "~> 1.0", optional: true},
-      {:bcrypt_elixir, "~> 2.0", optional: true},
-      {:argon2_elixir, "~> 2.0", optional: true}
+      {:pbkdf2_elixir, ">= 0.0.0", optional: true},
+      {:bcrypt_elixir, ">= 0.0.0", optional: true},
+      {:argon2_elixir, ">= 0.0.0", optional: true}
     ]
   end
 end
